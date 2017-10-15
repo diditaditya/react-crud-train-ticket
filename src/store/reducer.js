@@ -25,6 +25,21 @@ const reducer = (state = initialState, action) => {
                     ...state.reservations.slice(index + 1)
                 ]
             }
+        case "DELETE":
+            let deleteIndex = null;
+            state.reservations.map((reservation, idx) => {
+                if (String(reservation.id) === String(action.payload)) {
+                    deleteIndex = idx;
+                }
+                return idx;
+            });
+            return {
+                ...state,
+                reservations: [
+                    ...state.reservations.slice(0, deleteIndex),
+                    ...state.reservations.slice(deleteIndex + 1)
+                ]
+            }
         default:
             break;
     }

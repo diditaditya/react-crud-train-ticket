@@ -25,7 +25,16 @@ const List = (props) => {
                                     </Link>
                                 </td>
                                 <td>
-                                    <Button color="danger">Delete</Button>
+                                    <Button 
+                                        color="danger" 
+                                        onClick={(id) => {
+                                            props.toggle();
+                                            props.setToBeDeletedId(booking.id);
+                                            }
+                                        }
+                                    >
+                                        Delete
+                                    </Button>
                                 </td>
                             </tr>
                         )

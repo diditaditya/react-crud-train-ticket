@@ -3,8 +3,36 @@ import { connect } from 'react-redux';
 import { Row, Col, Table } from 'reactstrap';
 
 import List from './List/Booking';
+import DeleteConfirm from './Delete/DeleteConfirm';
+
+import action from '../store/action';
 
 class BookingList extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            modal: false,
+            toBeDeletedId: null,
+        }
+    }
+
+    toggleDeleteModal() {
+        this.setState({
+            modal: !this.state.modal,
+        });
+    }
+
+    setToBeDeletedId(id) {
+        this.setState({
+            toBeDeletedId: id,
+        });
+    }
+
+    deleteReservation(id) {
+        this.props.delete(id);
+    }
+
+
     render() {
         return (
             <div>
@@ -18,16 +46,26 @@ class BookingList extends Component {
                                     <th>No.</th>
                                     <th>ID</th>
                                     <th>Customer</th>
-                                    <th>Total Passengers</th>
-                                    <th>Departure Origin</th>
-                                    <th>Departure Destination</th>
+                                    <th>Passengers</th>
+                                    <th>Origin</th>
+                                    <th>Destination</th>
                                 </tr>
                             </thead>
-                            <List list={this.props.reservations} />
+                            <List 
+                                list={this.props.reservations}
+                                toggle={() => this.toggleDeleteModal()}
+                                setToBeDeletedId={(id) => this.setToBeDeletedId(id)} 
+                            />
                         </Table>
                     </Col>
                     <Col xs="1" sm="1" md="1" lg="2" xl="2" />
                 </Row>
+                <DeleteConfirm 
+                    toggle={() => this.toggleDeleteModal()}
+                    modal={this.state.modal}
+                    id={this.state.toBeDeletedId}
+                    delete={(id) => this.deleteReservation(id)}
+                />
             </div>
         )
     }
@@ -39,4 +77,10 @@ const mapStateToProps = (state) => {
     }
 }
 
-export default connect(mapStateToProps, null)(BookingList);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        delete: (id) => {dispatch(action.delete(id))},
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(BookingList);

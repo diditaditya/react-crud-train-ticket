@@ -10,6 +10,12 @@ const action = {
             type: "UPDATE",
             payload: item,
         }
+    },
+    delete: (id) => {
+        return {
+            type: "DELETE",
+            payload: id,
+        }
     }
 }
 
