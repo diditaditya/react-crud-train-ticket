@@ -8,6 +8,7 @@ import PassengersDetail from './Detail/Passenger';
 import TrainDetail from './Detail/Train';
 
 import detailSelector from '../helper/detailSelector';
+import '../style/styles.css';
 
 class BookingDetail extends Component {
     constructor(props) {
@@ -30,16 +31,16 @@ class BookingDetail extends Component {
         let editUrl = `/${this.props.match.params.bookingId}/edit`;
         return (
             <div>
-                <h3>Booking Detail</h3>
+                <h4 className="page-title" >Reservation Detail</h4>
                 <Row>
                     <Col xs="1" sm="1" md="1" lg="2" xl="2" />
                     <Col xs="10" sm="10" md="10" lg="8" xl="8">
                         <ReserveeDetail reservee={reservee} />
                         <PassengersDetail passengers={this.state.passengers} />
                         <TrainDetail depart={this.state.depart} return={this.state.return} />
-                        <div>
-                            <Link to="/"><Button>Back</Button></Link>
-                            <Link to={editUrl} ><Button>Edit</Button></Link>
+                        <div className="button-container" >
+                            <Link to="/"><Button size="lg" >Back</Button></Link>
+                            <Link to={editUrl} ><Button size="lg" >Edit</Button></Link>
                         </div>
                     </Col>
                     <Col xs="1" sm="1" md="1" lg="2" xl="2" />

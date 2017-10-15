@@ -3,12 +3,14 @@ import {
     Table,
     Input } from 'reactstrap';
 
+import '../../style/styles.css';
+
 class Passenger extends Component {
     render() {
         return (
             <div>
-                <h5>Passenger Details</h5>
-                <Table>
+                <h5 className="form-section-title" >Passenger Details</h5>
+                <Table bordered className="table-no-bottom-gap" >
                     <thead>
                         <tr>
                             <th ></th>
@@ -45,7 +47,7 @@ class Passenger extends Component {
                         </tr>
                     </tbody>
                 </Table>
-                <Table>
+                <Table bordered className="table-no-bottom-gap" >
                     <thead>
                         <tr>
                             <th ></th>

@@ -47,7 +47,7 @@ const validator = {
             if (isComplete) {
                 return {status: true};
             }
-            return {status: false, error: "Booking detail is incomplete"};
+            return {status: false, error: "Booking detail is incomplete, if return ticket is not required please leave the input blank"};
         }
         return { status: true };
     }

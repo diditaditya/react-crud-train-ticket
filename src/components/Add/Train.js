@@ -9,8 +9,8 @@ class Train extends Component {
     render() {
         return (
             <div>
-                <h5>Booking Details</h5>
-                <Table>
+                <h5 className="form-section-title" >Booking Details</h5>
+                <Table bordered>
                     <thead>
                         <tr>
                             <th ></th>

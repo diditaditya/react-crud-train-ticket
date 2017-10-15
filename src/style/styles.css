@@ -1,7 +1,23 @@
+* {
+    font-family: 'Lato', sans-serif;
+    /* border: 1px solid red; */
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.page-title {
+    text-align: center;
+    margin: 25px;
+    font-weight: bold;
+}
 
 .nav-container {
-    background-color: aqua;
+    background-color: white;
     margin-bottom: 25px;
+    width: 100%;
+    border-bottom: 1px solid grey;
 }
 
 .nav-brand {
@@ -9,6 +25,30 @@
     font-weight: bold;
     display: block;
     width: 50%;
+}
+
+.form-section-title {
+    background-color: grey;
+    padding: 10px;
+    color: whitesmoke;
+    margin-bottom: -2px;
+}
+
+.table-no-bottom-gap {
+    margin-bottom: 0px;
+}
+
+th {
+    font-size: 16px;
+    background-color: lightgrey;
+}
+
+td {
+    font-size: 16px;
+}
+
+.empty-list-message {
+    text-align: center;
 }
 
 .table-col-label {
@@ -29,6 +69,27 @@
     float: left;
 }
 
+input {
+    margin: -5px 0px -5px 0px;
+}
+
+.button-container {
+    margin: 25px;
+    text-align: center;
+}
+
 button {
     margin: 5px;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    color: grey;
+}
+
+.alert {
+    text-align: center;
 }

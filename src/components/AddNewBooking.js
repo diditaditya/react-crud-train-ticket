@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import { Redirect } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { 
     Row, 
-    Col, 
+    Col,
+    Alert, 
     Button } from 'reactstrap';
 
 import PassengerForm from './Add/Passenger';
@@ -13,8 +14,6 @@ import TrainForm from './Add/Train';
 import action from '../store/action';
 import validator from '../helper/formValidator';
 import '../style/styles.css';
-
-
 
 class AddBooking extends Component {
     constructor(props) {
@@ -173,7 +172,7 @@ class AddBooking extends Component {
                     });
                 }
                 return this.setState({
-                    message: departCheck.error,
+                    message: "Depart train detail may not be empty",
                 });
             }
             return this.setState({
@@ -190,7 +189,7 @@ class AddBooking extends Component {
         // console.log(this.state);
         return (
                 <div>
-                    <h3>Ticket Reservation</h3>
+                    <h4 className="page-title" >Ticket Reservation</h4>
                     <Row>
                         <Col xs="1" sm="1" md="1" lg="2" xl="2" />
                         <Col xs="10" sm="10" md="10" lg="8" xl="8">
@@ -211,14 +210,19 @@ class AddBooking extends Component {
                                 onDepartChange={(data, attr) => this.onDepartTrainChange(data, attr)}
                                 onReturnChange={(data, attr) => this.onReturnTrainChange(data, attr)}
                             />
-                            <div>
-                                <Button>Cancel</Button>
-                                <Button onClick={() => this.onSubmit()} >Submit</Button>
+                            {
+                                this.state.message &&
+                                <Alert color="warning" >
+                                    {this.state.message}
+                                </Alert>
+                            }
+                            <div className="button-container">
+                                <Link to="/" ><Button size="lg" >Cancel</Button></Link>
+                                <Button size="lg" onClick={() => this.onSubmit()} >Submit</Button>
                                 {
                                     this.state.fireRedirect && <Redirect to="/" />
                                 }
                             </div>
-                            <p>{this.state.message}</p>
                         </Col>
                         <Col xs="1" sm="1" md="1" lg="2" xl="2" />
                     </Row>

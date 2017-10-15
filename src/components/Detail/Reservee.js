@@ -7,8 +7,8 @@ class Reservee extends Component {
     render() {
         return (
             <div>
-                <h5>Customer/Reservee Detail</h5>
-                <Table>
+                <h5 className="form-section-title" >Customer/Reservee Detail</h5>
+                <Table bordered className="table-no-bottom-gap" >
                     <tbody>
                         <tr>
                             <th scope="row" className="table-col-label" >Name</th>

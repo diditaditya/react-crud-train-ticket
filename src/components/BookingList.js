@@ -6,6 +6,7 @@ import List from './List/Booking';
 import DeleteConfirm from './Delete/DeleteConfirm';
 
 import action from '../store/action';
+import '../style/styles.css';
 
 class BookingList extends Component {
     constructor(props) {
@@ -36,11 +37,11 @@ class BookingList extends Component {
     render() {
         return (
             <div>
-                <h3>Reservation List</h3>
+                <h4 className="page-title" >Reservation List</h4>
                 <Row>
                     <Col xs="1" sm="1" md="1" lg="2" xl="2" />
                     <Col xs="10" sm="10" md="10" lg="8" xl="8">
-                        <Table>
+                        <Table bordered striped>
                             <thead>
                                 <tr>
                                     <th>No.</th>
@@ -49,6 +50,7 @@ class BookingList extends Component {
                                     <th>Passengers</th>
                                     <th>Origin</th>
                                     <th>Destination</th>
+                                    <th>Options</th>
                                 </tr>
                             </thead>
                             <List 

@@ -21,11 +21,10 @@ const List = (props) => {
                                 <td>{booking.depart.destination}</td>
                                 <td>
                                     <Link to={url}>
-                                        <Button>Show Detail</Button>
+                                        <Button size="sm" >Detail</Button>
                                     </Link>
-                                </td>
-                                <td>
-                                    <Button 
+                                    <Button
+                                        size="sm" 
                                         color="danger" 
                                         onClick={(id) => {
                                             props.toggle();
@@ -46,7 +45,9 @@ const List = (props) => {
         return (
             <tbody>
                 <tr>
-                    <td colSpan="6">No Reservation Found</td>
+                    <td colSpan="7" className="empty-list-message" >
+                        No Reservation Found
+                    </td>
                 </tr>
             </tbody>
         );
