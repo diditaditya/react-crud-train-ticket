@@ -10,6 +10,7 @@ import {
 import PassengerForm from './Add/Passenger';
 import ReserveeForm from './Add/Reservee';
 import TrainForm from './Add/Train';
+import PassengerInstruction from './Others/PassengerInstruction';
 
 import action from '../store/action';
 import validator from '../helper/formValidator';
@@ -47,7 +48,7 @@ class AddBooking extends Component {
                 {
                     name: '',
                     idCardNumber: '',
-                    type: 'Adult',
+                    type: 'DEWASA (Adult)',
                 },
                 {
                     name: '',
@@ -189,7 +190,10 @@ class AddBooking extends Component {
         // console.log(this.state);
         return (
                 <div>
-                    <h4 className="page-title" >Ticket Reservation</h4>
+                    <div className="page-title-container" >
+                        <h4 className="page-title" >FORMULIR PEMESANAN TIKET KERETA API</h4>
+                        <h4 className="page-title" ><i>ticket reservation form</i></h4>
+                    </div>
                     <Row>
                         <Col xs="1" sm="1" md="1" lg="2" xl="2" />
                         <Col xs="10" sm="10" md="10" lg="8" xl="8">
@@ -205,6 +209,7 @@ class AddBooking extends Component {
                                 onIdChange={(index, data) => this.onPassengerIdChange(index, data)}
                                 onTypeChange={(index, data) => this.onPassengerTypeChange(index, data)}
                             />
+                            <PassengerInstruction />
                             <TrainForm
                                 values={this.state}
                                 onDepartChange={(data, attr) => this.onDepartTrainChange(data, attr)}

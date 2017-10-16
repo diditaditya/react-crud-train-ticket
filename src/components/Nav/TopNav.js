@@ -25,7 +25,7 @@ class TopNav extends Component {
         return (
             <div className="nav-container" >
                 <Navbar color="faded" light expand="md">
-                    <Link to="/" className="nav-brand">Train Reservation</Link>
+                    <Link to="/" className="nav-brand">Train Ticket Reservation</Link>
                     <NavbarToggler onClick={() => this.toggle()} />
                     <Collapse isOpen={this.state.isOpen} navbar>
                         <Nav className="ml-auto" navbar>

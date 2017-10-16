@@ -31,7 +31,10 @@ class BookingDetail extends Component {
         let editUrl = `/${this.props.match.params.bookingId}/edit`;
         return (
             <div>
-                <h4 className="page-title" >Reservation Detail</h4>
+                <div className="page-title-container" >
+                    <h4 className="page-title" >DETAIL PEMESANAN TIKET KERETA API</h4>
+                    <h4 className="page-title" ><i>ticket reservation detail</i></h4>
+                </div>
                 <Row>
                     <Col xs="1" sm="1" md="1" lg="2" xl="2" />
                     <Col xs="10" sm="10" md="10" lg="8" xl="8">

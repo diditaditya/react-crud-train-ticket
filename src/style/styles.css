@@ -7,9 +7,12 @@ body {
     overflow-x: hidden;
 }
 
+.page-title-container {
+    margin: 25px;
+}
+
 .page-title {
     text-align: center;
-    margin: 25px;
     font-weight: bold;
 }
 
@@ -52,11 +55,11 @@ td {
 }
 
 .table-col-label {
-    width: 20%;
+    width: 30%;
 }
 
 .table-col-input {
-    width: 40%;
+    width: 35%;
 }
 
 .schedule-date {
@@ -92,4 +95,9 @@ a:hover {
 
 .alert {
     text-align: center;
+}
+
+.instruction {
+    white-space: pre-wrap;
+    font-size: .85em;
 }

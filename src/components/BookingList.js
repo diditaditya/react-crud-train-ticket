@@ -37,7 +37,10 @@ class BookingList extends Component {
     render() {
         return (
             <div>
-                <h4 className="page-title" >Reservation List</h4>
+                <div className="page-title-container" >
+                    <h4 className="page-title" >DAFTAR PEMESANAN TIKET KERETA API</h4>
+                    <h4 className="page-title" ><i>ticket reservation list</i></h4>
+                </div>
                 <Row>
                     <Col xs="1" sm="1" md="1" lg="2" xl="2" />
                     <Col xs="10" sm="10" md="10" lg="8" xl="8">
@@ -46,11 +49,11 @@ class BookingList extends Component {
                                 <tr>
                                     <th>No.</th>
                                     <th>ID</th>
-                                    <th>Customer</th>
-                                    <th>Passengers</th>
-                                    <th>Origin</th>
-                                    <th>Destination</th>
-                                    <th>Options</th>
+                                    <th>PEMESAN <br /><i>Customer</i></th>
+                                    <th>JUMLAH PENUMPANG <br /><i>Total Passengers</i></th>
+                                    <th>ASAL <br /><i>Origin</i></th>
+                                    <th>TUJUAN <br /><i>Destination</i></th>
+                                    <th>PILIHAN <br /><i>Options</i></th>
                                 </tr>
                             </thead>
                             <List 

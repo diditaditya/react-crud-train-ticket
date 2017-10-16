@@ -11,6 +11,7 @@ import {
 import ReserveeForm from './Edit/Reservee';
 import PassengerForm from './Edit/Passenger';
 import TrainForm from './Edit/Train';
+import PassengerInstruction from './Others/PassengerInstruction';
 
 import action from '../store/action';
 import validator from '../helper/formValidator';
@@ -160,7 +161,10 @@ class AddBooking extends Component {
         let url = `/${this.props.match.params.bookingId}`;
         return (
             <div>
-                <h4 className="page-title" >Ticket Reservation</h4>
+                <div className="page-title-container" >
+                    <h4 className="page-title" >FORMULIR PEMESANAN TIKET KERETA API</h4>
+                    <h4 className="page-title" ><i>ticket reservation form</i></h4>
+                </div>
                 <Row>
                     <Col xs="1" sm="1" md="1" lg="2" xl="2" />
                     <Col xs="10" sm="10" md="10" lg="8" xl="8">
@@ -176,6 +180,7 @@ class AddBooking extends Component {
                             onIdChange={(index, data) => this.onPassengerIdChange(index, data)}
                             onTypeChange={(index, data) => this.onPassengerTypeChange(index, data)}
                         />
+                        <PassengerInstruction />
                         <TrainForm
                             depart={this.state.depart}
                             return={this.state.return}

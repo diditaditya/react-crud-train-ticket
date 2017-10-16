@@ -47,39 +47,39 @@ class Passenger extends Component {
     render() {
         return (
             <div>
-                <h5 className="form-section-title" >Passenger Details</h5>
+                <h5 className="form-section-title" >DATA PENUMPANG/<i>Passenger Details</i></h5>
                 <Table bordered className="table-no-bottom-gap" >
                     <thead>
                         <tr>
                             <th ></th>
-                            <th>Passenger 1</th>
-                            <th>Passenger 2</th>
+                            <th>PENUMPANG 1 /<i>Passenger 1</i></th>
+                            <th>PENUMPANG 2 /<i>Passenger 2</i></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row" >Name</th>
+                            <th scope="row" className="table-col-label" >NAMA /<i>Name</i></th>
                             <td><Input type="text" value={this.state.passengers[0].name} onChange={(e, idx) => this.onNameChange(e, 0)} /></td>
                             <td><Input type="text" value={this.state.passengers[1].name} onChange={(e, idx) => this.onNameChange(e, 1)} /></td>
                         </tr>
                         <tr>
-                            <th scope="row" >ID Card No.</th>
+                            <th scope="row" className="table-col-label" >NO IDENTITAS /<i>ID</i></th>
                             <td><Input type="text" value={this.state.passengers[0].idCardNumber} onChange={(e, idx) => this.onIdChange(e, 0)} /></td>
                             <td><Input type="text" value={this.state.passengers[1].idCardNumber} onChange={(e, idx) => this.onIdChange(e, 1)} /></td>
                         </tr>
                         <tr>
-                            <th scope="row" >Type</th>
+                            <th scope="row" className="table-col-label" >TIPE PNP /<i>Type</i></th>
                             <td>
                                 <Input type="select" value={this.state.passengers[0].type} onChange={(e, idx) => this.onTypeChange(e, 0)} >
-                                    <option>Adult</option>
-                                    <option>Infant</option>
+                                    <option>DEWASA (Adult)</option>
+                                    <option>DEWASA (Infant) non seat</option>
                                 </Input>
                             </td>
                             <td>
                                 <Input type="select" value={this.state.passengers[1].type} onChange={(e, idx) => this.onTypeChange(e, 1)}>
                                     <option></option>
-                                    <option>Adult</option>
-                                    <option>Infant</option>
+                                    <option>DEWASA (Adult)</option>
+                                    <option>DEWASA (Infant) non seat</option>
                                 </Input>
                             </td>
                         </tr>
@@ -89,35 +89,35 @@ class Passenger extends Component {
                     <thead>
                         <tr>
                             <th ></th>
-                            <th>Passenger 3</th>
-                            <th>Passenger 4</th>
+                            <th>PENUMPANG 3 /<i>Passenger 3</i></th>
+                            <th>PENUMPANG 4 /<i>Passenger 4</i></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row" >Name</th>
+                            <th scope="row" className="table-col-label" >NAMA /<i>Name</i></th>
                             <td><Input type="text" value={this.state.passengers[2].name} onChange={(e, idx) => this.onNameChange(e, 2)} /></td>
                             <td><Input type="text" value={this.state.passengers[3].name} onChange={(e, idx) => this.onNameChange(e, 3)} /></td>
                         </tr>
                         <tr>
-                            <th scope="row" >ID Card No.</th>
+                            <th scope="row" className="table-col-label" >NO IDENTITAS /<i>ID</i></th>
                             <td><Input type="text" value={this.state.passengers[2].idCardNumber} onChange={(e, idx) => this.onIdChange(e, 2)} /></td>
                             <td><Input type="text" value={this.state.passengers[3].idCardNumber} onChange={(e, idx) => this.onIdChange(e, 3)} /></td>
                         </tr>
                         <tr>
-                            <th scope="row" >Type</th>
+                            <th scope="row" className="table-col-label" >TIPE PNP /<i>Type</i></th>
                             <td>
                                 <Input type="select" value={this.state.passengers[2].type} onChange={(e, idx) => this.onTypeChange(e, 2)}>
                                     <option></option>
-                                    <option>Adult</option>
-                                    <option>Infant</option>
+                                    <option>DEWASA (Adult)</option>
+                                    <option>DEWASA (Infant) non seat</option>
                                 </Input>
                             </td>
                             <td>
                                 <Input type="select" value={this.state.passengers[3].type} onChange={(e, idx) => this.onTypeChange(e, 3)}>
                                     <option></option>
-                                    <option>Adult</option>
-                                    <option>Infant</option>
+                                    <option>DEWASA (Adult)</option>
+                                    <option>DEWASA (Infant) non seat</option>
                                 </Input>
                             </td>
                         </tr>

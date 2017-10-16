@@ -10,18 +10,18 @@ class Train extends Component {
     render() {
         return (
             <div>
-                <h5 className="form-section-title" >Booking Details</h5>
+                <h5 className="form-section-title" >DATA PERJALANAN / <i>Booking Details</i></h5>
                 <Table bordered>
                     <thead>
                         <tr>
                             <th ></th>
-                            <th>Depart Train</th>
-                            <th>Return Train</th>
+                            <th>PERGI/<i>Depart</i></th>
+                            <th>PULANG/<i>Return</i></th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <th scope="row" className="table-col-label" >Train Name</th>
+                            <th scope="row" className="table-col-label" >NAMA KERETA API <br /> <i>Train Name</i></th>
                             <td className="table-col-input" >
                                 {this.props.depart.trainName}
                             </td>
@@ -30,7 +30,7 @@ class Train extends Component {
                             </td>
                         </tr>
                         <tr>
-                            <th scope="row" className="table-col-label" >Train Class</th>
+                            <th scope="row" className="table-col-label" >KELAS /<i>Class</i></th>
                             <td className="table-col-input" >
                                 {this.props.depart.class}
                             </td>
@@ -39,7 +39,7 @@ class Train extends Component {
                             </td>
                         </tr>
                         <tr>
-                            <th scope="row" className="table-col-label" >Origin</th>
+                            <th scope="row" className="table-col-label" >ASAL/<i>Origin</i></th>
                             <td className="table-col-input" >
                                 {this.props.depart.origin}
                             </td>
@@ -48,7 +48,7 @@ class Train extends Component {
                             </td>
                         </tr>
                         <tr>
-                            <th scope="row" className="table-col-label" >Destination</th>
+                            <th scope="row" className="table-col-label" >TUJUAN /<i>Destination</i></th>
                             <td className="table-col-input" >
                                 {this.props.depart.destination}
                             </td>
@@ -57,7 +57,7 @@ class Train extends Component {
                             </td>
                         </tr>
                         <tr>
-                            <th scope="row" className="table-col-label" >Schedule</th>
+                            <th scope="row" className="table-col-label" >JADWAL BERANGKAT <br /><i>Departure</i></th>
                             <td className="table-col-input" >
                                 {this.props.depart.date}   {this.props.depart.time}
                             </td>

@@ -7,19 +7,21 @@ class Reservee extends Component {
     render() {
         return (
             <div>
-                <h5 className="form-section-title" >Customer/Reservee Detail</h5>
+                <h5 className="form-section-title" >
+                    DATA PEMESAN / <i>Customer(Reservee) Detail</i>
+                </h5>
                 <Table bordered className="table-no-bottom-gap" >
                     <tbody>
                         <tr>
-                            <th scope="row" className="table-col-label" >Name</th>
+                            <th scope="row" className="table-col-label" >NAMA /<i>Name</i></th>
                             <td>{this.props.reservee.name}</td>
                         </tr>
                         <tr>
-                            <th scope="row" className="table-col-label" >Address</th>
+                            <th scope="row" className="table-col-label" >ALAMAT /<i>Address</i></th>
                             <td>{this.props.reservee.address}</td>
                         </tr>
                         <tr>
-                            <th scope="row" className="table-col-label" >Phone</th>
+                            <th scope="row" className="table-col-label" >TELEPON /<i>Telephone</i></th>
                             <td>{this.props.reservee.phone}</td>
                         </tr>
                     </tbody>
